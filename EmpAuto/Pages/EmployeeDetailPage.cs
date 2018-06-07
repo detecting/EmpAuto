@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmpAuto
+namespace EmpAuto.Pages
 {
-    public class Class1
+    class EmployeeDetailPage
     {
     }
 }
