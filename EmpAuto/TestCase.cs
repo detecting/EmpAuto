@@ -29,6 +29,8 @@ namespace EmployerAutomation
             Assert.AreEqual(Properties.driver.Url, Properties.homeUrl);
             //HomePage
             EmployeersCreatePage employeersPage = home.employeeSelect();
+            // 点击create
+            employeersPage.CreateEmployee();
         }
 
         [TearDown]
