@@ -19,15 +19,15 @@ namespace EmployerAutomation.Pages
         }
         [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div/ul/li[5]/a")]
         public IWebElement Administration { get; set; }
-        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div/ul/li[5]/ul/li[2]/a")]
-        public IWebElement Employees { get; set; }
+        [FindsBy(How = How.XPath, Using = "/html/body/div[3]/div/div/ul/li[5]/ul/li[3]/a")]
+        public IWebElement Tm { get; set; }
 
-        public EmployeersCreatePage employeeSelect()
+        public TmCreatePage employeeSelect()
         {
             Administration.Click();
             Thread.Sleep(1000);
-            Employees.Click();
-            return new EmployeersCreatePage();
+            Tm.Click();
+            return new TmCreatePage();
         }
 
     }

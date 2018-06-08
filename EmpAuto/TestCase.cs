@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmpAuto.Pages;
 using EmployerAutomation.Data;
 using EmployerAutomation.Pages;
 using NUnit.Framework;
@@ -28,14 +29,24 @@ namespace EmployerAutomation
             HomePage home = loginPage.Login(Properties.userName, Properties.password);
             Assert.AreEqual(Properties.driver.Url, Properties.homeUrl);
             //HomePage
-            EmployeersCreatePage employeersPage = home.employeeSelect();
+            TmCreatePage tmCreatePage = home.employeeSelect();
             // 点击create
-            employeersPage.CreateEmployee();
+            TmDetailPage tmDetailPage = tmCreatePage.Create();
+            TmCreatePage checkCreatePage = tmDetailPage.FillTheForm();
+
+//            checkCreatePage.CheckRecords();
+            //循环删除
+            for (int i = 0; i < 5; i++)
+            {
+                checkCreatePage.DeleteRecords();
+            }
+            
         }
 
         [TearDown]
         public void TearDown()
         {
+            Properties.driver.Quit();
         }
     }
 }

@@ -14,6 +14,9 @@ namespace EmployerAutomation.Data
         public static string userName = "ray";
         public static string password = "123123";
         public static string homeUrl = "http://horse-dev.azurewebsites.net/";
+        public static string seletectedText = "Time";
+        public static string code = "morgan_code";
+        public static string description = "morgan_des";
 
     }
 }

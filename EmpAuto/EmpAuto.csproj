@@ -58,8 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Properties.cs" />
-    <Compile Include="Pages\EmployeeCreatePage.cs" />
-    <Compile Include="Pages\EmployeeDetailPage.cs" />
+    <Compile Include="Pages\TmCreatePage.cs" />
+    <Compile Include="Pages\TmDetailPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="PublicMethods\Methods.cs" />

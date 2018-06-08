@@ -13,6 +13,7 @@ namespace EmployerAutomation.PublicMethods
     {
         public static void Initial()
         {
+
             Properties.driver = new ChromeDriver();
             Properties.driver.Navigate().GoToUrl(Properties.loginUrl);
         }
